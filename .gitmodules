@@ -1,0 +1,3 @@
+[submodule "extern/fvm"]
+	path = extern/fvm
+	url = https://github.com/filecoin-project/ref-fvm.git
