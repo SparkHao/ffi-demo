@@ -18,11 +18,16 @@ publish = false
 crate-type = ["rlib", "staticlib"]
 
 [patch.crates-io]
-fvm = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
-fvm_ipld_car = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
-fvm_shared = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
-fvm_ipld_blockstore = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
-fvm_ipld_encoding = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+#fvm = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+#fvm_ipld_car = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+#fvm_shared = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+#fvm_ipld_blockstore = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+#fvm_ipld_encoding = { git = "https://github.com/filecoin-project/ref-fvm", branch = "experimental/fvm-m2" }
+fvm = { path = "../extern/fvm/fvm" }
+fvm_ipld_car = { path = "../extern/fvm/ipld/car" }
+fvm_shared = { path = "../extern/fvm/shared" }
+fvm_ipld_blockstore = { path = "../extern/fvm/ipld/blockstore" }
+fvm_ipld_encoding = { path = "../extern/fvm/ipld/encoding" }
 
 [dependencies]
 bls-signatures = { version = "0.11.0", default-features = false, features = ["blst"] }
